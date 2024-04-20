@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lexiocgraphical {
+public class Lexicographical {
     public static void main(String[] args) {
         int n=13;
         List<String> ll=new ArrayList<>();
@@ -13,7 +13,7 @@ public class Lexiocgraphical {
         if(curr>n){
             return ;
         }
-        System.out.println(String.valueOf(curr));
+       // System.out.println(String.valueOf(curr));
         ll.add(String.valueOf(curr));
         int i=0;
         if(curr==0){
