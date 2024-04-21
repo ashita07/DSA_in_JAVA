@@ -6,13 +6,16 @@ public class Combination_sum {
         int sum=7;
         int[] coin ={2,3,5};
         int a=0;
+        List<List<Integer>> ans= new ArrayList<>();
         List<Integer> ll= new ArrayList<>();
-        Combination(coin,sum,a,ll);
+        Combination(coin,sum,a,ll,ans);
+        System.out.println(ans);
     }
 
-    public static void Combination(int[] coin,int sum,int a,List<Integer> ll) {
+    public static void Combination(int[] coin,int sum,int a,List<Integer> ll,List<List<Integer>> ans) {
         if(sum==0){
-            System.out.println(ll);
+          //  System.out.println(ll);
+            ans.add(new ArrayList<>(ll));
             return;
         }
         for (int i=a;i<coin.length;i++){
@@ -20,7 +23,7 @@ public class Combination_sum {
                 return;
             }
             ll.add(coin[i]);
-            Combination(coin,sum-coin[i],i,ll);
+            Combination(coin,sum-coin[i],i,ll,ans);
             ll.remove(ll.size()-1);
         }
 
