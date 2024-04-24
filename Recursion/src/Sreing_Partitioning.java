@@ -20,7 +20,7 @@ public class Sreing_Partitioning {
             if(is_Pallindrome(s)){
                 ll.add(s);
                 Partition(ques.substring(i),ans+s+"|",ll,ll1);
-                ll.remove(ll.size()-1);
+                ll.removeLast();
             }
 
         }
