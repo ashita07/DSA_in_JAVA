@@ -1,6 +1,6 @@
 public class Print_substring_lengthwise {
     public static void main(String[] args) {
-        String s="sample";
+        String s="submission";
         for(int len=1;len<=s.length();len++){
             for(int j=len;j<=s.length();j++){
                 int i=j-len;
